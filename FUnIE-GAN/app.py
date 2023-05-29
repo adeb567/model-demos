@@ -22,10 +22,10 @@ def process_image():
 
     # Process the image with your deep learning model
     ## test funie-gan
-    checkpoint_dir  = '/home/amitabha/demos/FUnIE/demo1/models/gen_p/'
+    checkpoint_dir  = '/FUnIE-GAN/models/gen_p/'
     model_name_by_epoch = "model_15320_" 
     ## test funie-gan-up
-    #checkpoint_dir  = 'models/gen_up/'
+    #checkpoint_dir  = '/FUnIE-GAN/models/gen_up/'
     #model_name_by_epoch = "model_35442_" 
 
     model_h5 = checkpoint_dir + model_name_by_epoch + ".h5"  
@@ -54,8 +54,6 @@ def process_image():
 
     # save output images
     out_img = Image.fromarray(gen_img)
-
-    #Image.fromarray(gen_img).save("/home/amitabha/demos/FUnIE/demo1/data/output.jpg")
 
     input_image_data = image_to_base64(inp_img)
     output_image_data = image_to_base64(out_img)
