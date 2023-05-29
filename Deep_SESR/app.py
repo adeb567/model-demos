@@ -31,7 +31,7 @@ def process_image():
     hr_res, hr_shape = (hr_w, hr_h), (hr_h, hr_w, 3)
 
     ## test deep-sesr
-    checkpoint_dir  = '/home/amitabha/demos/Deep-SESR/demo2/models/'
+    checkpoint_dir  = '/Deep_SESR/models/'
     ckpt_name =  "deep_sesr_2x_1d"
 
     model_h5 = checkpoint_dir + ckpt_name + ".h5"  
@@ -61,14 +61,10 @@ def process_image():
     gen_hr = deprocess_uint8(gen_hr).reshape(hr_shape)
     gen_mask = deprocess_mask(gen_mask).reshape(lr_h, lr_w)
 
-    # save generated images
-    #samples_dir = '/home/amitabha/demos/Deep-SESR/demo2/data/'
-
     input = Image.fromarray(img_lrd)
     output_en = Image.fromarray(gen_lr)
     output_sal = Image.fromarray(gen_mask)
     output_sesr = Image.fromarray(gen_hr)
-
 
     input_image_data = image_to_base64(input)
     output_enhanced = image_to_base64(output_en)
@@ -79,7 +75,6 @@ def process_image():
     output1 = "data:image/png;base64," + output_enhanced
     output2 = "data:image/png;base64," + output_saliency
     output3 = "data:image/png;base64," + output_super
-
 
     return render_template("display.html", input = input, output1 = output1, output2 = output2, output3 = output3)
 
