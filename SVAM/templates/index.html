@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Upload</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <script>
+    function validateForm() {
+      var fileInput = document.getElementById('image');
+      var errorMessage = document.getElementById('error-message');
+
+      if (fileInput.files.length === 0) {
+        errorMessage.innerText = 'Please select a file.';
+        return false; //Prevent form submission
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Image Upload for SVAM</h1>
+  <form action="/process" method="POST" enctype="multipart/form-data" onsubmit="return validateForm();">
+    <input type="file" name="image" id="image" accept="image/jpeg, image/png, image/gif">
+    <span id="error-message" style="color: red;"></span><br>
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>
