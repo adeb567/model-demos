@@ -29,7 +29,7 @@ def process_image():
     im_shape = (256, 256, 3)
 
     ## load specific model 
-    model_h5 = "/home/amitabha/demos/SVAM/demo3/models/SVAM_Net.h5"
+    model_h5 = "models/SVAM_Net.h5"
     assert os.path.exists(model_h5), "h5 model not found"
     model = SVAM_Net()
     model.load_weights(model_h5)
