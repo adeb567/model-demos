@@ -1,10 +1,12 @@
 # model-demos
 
-Setup the Flask environment using: https://phoenixnap.com/kb/install-flask
+Steps:
 
-Set the model path in app.py
+- Setup the Flask environment using: https://phoenixnap.com/kb/install-flask
 
-Run the app using 'python3 app.py'
+- Set the model path in app.py
+
+- Run the app using 'python3 app.py'
 
 # Project Links
 FUnIE-GAN - https://irvlab.cs.umn.edu/projects/funie-gan
