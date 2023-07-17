@@ -18,14 +18,12 @@ def myUpSample2X(layer_input, skip_input, filters, f_size=3, dropout_rate=0):
     if dropout_rate: u = Dropout(dropout_rate)(u)
     u = BatchNormalization(momentum=0.8)(u)
     u = Concatenate()([u, skip_input])
-    print(u)
     return u
 
 
 def plain_vgg_en_dec(res=(256, 256, 3)):
     vgg = VGG16(input_shape=res, include_top=False, weights='imagenet')
     vgg.trainable = True
-    vgg.summary()
     for layer in vgg.layers:
         #print (layer.name)
         layer.trainable = True
