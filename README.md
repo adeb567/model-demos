@@ -23,8 +23,12 @@ Steps for Integrated App:
 
 - Run the app using 'python3 app.py' in /Integrated
 
+  flask run --host=0.0.0.0
+
 # Deployment
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+
+gunicorn --bind 0.0.0.0:5000 wsgi:app
 
 # Project Links
 FUnIE-GAN - https://irvlab.cs.umn.edu/projects/funie-gan
