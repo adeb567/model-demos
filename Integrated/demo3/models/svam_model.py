@@ -65,8 +65,6 @@ def SVAM_Net(res=(256, 256, 3), model_h5=None):
     for layer in model.layers:
         layer.trainable = True
 
-    model.summary()
-
     # pre-trained encoder layers
     conv12, pool1 = model.get_layer('block1_conv2').output, model.get_layer('block1_pool').output
     conv22, pool2 = model.get_layer('block2_conv2').output, model.get_layer('block2_pool').output
