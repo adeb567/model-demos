@@ -17,7 +17,9 @@ Steps for Integrated App:
   (For SVAM - download the pretrained model weights from https://drive.google.com/drive/folders/19OyCuvZ0sLlHdmF1TrDRa4QrFLwhCWRk and place it in Intregated/demo3/models)
 
   Intregated/demo1 - FUnIE
+  
   Intregated/demo2 - Deep_SESR
+  
   Intregated/demo3 - SVAM
 
 - Run the app using 'python3 app.py' in /Integrated
