@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Model</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Select an Model:</h1>
+    <form action="/submit" method="post" onsubmit="return validateForm()">
+        <input type="radio" name="option" id="option1" value="option1">
+        <label for="option1">FUnIE</label><br>
+
+        <input type="radio" name="option" id="option2" value="option2">
+        <label for="option2">Deep-SESR</label><br>
+
+        <input type="radio" name="option" id="option3" value="option3">
+        <label for="option3">SVAM</label><br>
+
+        <span id="error-message" style="color: red;"></span><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function validateForm() {
+            var selectedOption = document.querySelector('input[name="option"]:checked');
+            var errorMessage = document.getElementById('error-message');
+            if (!selectedOption) {
+                errorMessage.innerText = 'Please select a model.';
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
