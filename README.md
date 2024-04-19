@@ -3,7 +3,7 @@
 ## Introduction
 The image enhancement models often tend to have an overwhelming code base and is hard for people from other domains to access these models. For convenience and increased usage by people who want to use them for research and other applications, We have developed a flask-based app to easily interact with these models through the web and get the output. This lays down a platform to easily analyze the outputs of the model for future work.
 
-![image](https://github.com/adeb567/model-demos/blob/main/image.png?raw=true)
+![image](https://github.com/adeb567/model-demos/blob/main/app.png?raw=true)
 
 ### Steps for Individual Apps:
 
